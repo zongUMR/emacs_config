@@ -4,13 +4,14 @@
 (use-package lsp-mode
   :ensure t
   
+  :hook (
+    (go-mode . lsp-deferred)
+    (python-mode . lsp-deferred)
+    (c++-mode . lsp-deferred)
+    (c-mode . lsp-deferred)
+    (rust-mode . lsp-deferred)
+  )
   :config
-  
-  (add-hook 'go-mode-hook #'lsp)
-  (add-hook 'python-mode-hook #'lsp)
-  (add-hook 'c++-mode-hook #'lsp)
-  (add-hook 'c-mode-hook #'lsp)
-  (add-hook 'rust-mode-hook #'lsp)
 
   (lsp-register-client
    (make-lsp-client :new-connection (lsp-stdio-connection "pyls")
