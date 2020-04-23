@@ -1,0 +1,11 @@
+(require 'pkg-lsp)
+(require 'pkg-golang)
+(require 'pkg-clang)
+(require 'pkg-c++)
+(require 'pkg-web)
+(require 'pkg-markdown)
+(require 'pkg-rust)
+(require 'pkg-tools)
+(require 'json)
+
+(provide 'lang)
