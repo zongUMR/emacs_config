@@ -69,7 +69,7 @@
   (select-frame frame)
   (progn
     (if (window-system frame)
-        (pkg-pick-gui-faces)
+	(pkg-pick-gui-faces)
       (pkg-pick-terminal-faces)
       )
     )
@@ -87,7 +87,11 @@
 
 (use-package doom-modeline
   :ensure t
-  :hook (after-init . doom-modeline-mode))
+  :hook (after-init . doom-modeline-mode)
+  :config
+  (set-face-attribute 'mode-line nil :family "JetBrains Mono" :height 140)
+  (set-face-attribute 'mode-line-inactive nil :family "Jetbrains Mono" :height 140)
+)
 
 ;; FEATURE
 (set-face-background hl-line-face nil)
