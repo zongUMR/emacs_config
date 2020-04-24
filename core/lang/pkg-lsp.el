@@ -3,21 +3,22 @@
 ;; ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 (use-package lsp-mode
   :ensure t
-  
+  :commands (lsp lsp-deferred)
   :hook (
     (go-mode . lsp-deferred)
     (python-mode . lsp-deferred)
     (c++-mode . lsp-deferred)
     (c-mode . lsp-deferred)
     (rust-mode . lsp-deferred)
+    (web-mode . lsp-deferred)
   )
+	     
   :config
-
   (lsp-register-client
    (make-lsp-client :new-connection (lsp-stdio-connection "pyls")
 		    :major-modes '(python-mode)
 		    :server-id 'pyls))
-  :commands lsp
+  
   )
 
 (use-package lsp-ui
@@ -40,10 +41,12 @@
   (setq lsp-ui-sideline-ignore-duplicate t)
   (add-hook 'lsp-mode-hook 'lsp-ui-mode))
 
+(use-package helm-lsp
+  :commands helm-lsp-workspace-symbol)
+
 (use-package company-lsp
   :ensure t
-  :config
-  (push 'company-lsp company-backends))
+  :commands company-lsp)
 
 
 (provide 'pkg-lsp)

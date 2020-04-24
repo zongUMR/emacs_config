@@ -15,8 +15,10 @@
     (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
     (add-to-list 'auto-mode-alist '("\\.css?\\'" . web-mode))
     (add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
+    (add-to-list 'auto-mode-alist '("\\.jsx\\'" . web-mode))
+    (add-to-list 'auto-mode-alist '("\\.tsx\\'" . web-mode))
 
-    (add-hook 'web-mode-hook  'my-web-mode-hook)    
+    (add-hook 'web-mode-hook  'pkg-web-mode-hook)    
     (setq tab-width 4)
 
     (add-hook 'web-mode-hook  'emmet-mode)))
