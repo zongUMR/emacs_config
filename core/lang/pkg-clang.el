@@ -16,7 +16,15 @@
 (use-package disaster
   :commands (disaster))
 
-(use-package clang-format)
+(use-package clang-format
+ :config
+ (defun clang-action-func()
+  (add-hook 'before-save-hook 'clang-format-buffer)
+  )
+
+ (add-hook 'c-mode-common-hook 'clang-action-func)
+ )
+
 
 (use-package cmake-mode
   :mode (("CMakeLists\\.txt\\'" . cmake-mode) ("\\.cmake\\'" . cmake-mode)))
