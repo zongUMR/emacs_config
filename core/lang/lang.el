@@ -1,5 +1,6 @@
 (require 'pkg-lsp)
 (require 'pkg-golang)
+(require 'pkg-python)
 (require 'pkg-clang)
 (require 'pkg-c++)
 (require 'pkg-web)
