@@ -11,6 +11,7 @@
     (c-mode . lsp-deferred)
     (rust-mode . lsp-deferred)
     (web-mode . lsp-deferred)
+    (haskell-mode . lsp-deferred)
     )
   :bind (
 	 ("C-c C-d" . lsp-find-difinition)
