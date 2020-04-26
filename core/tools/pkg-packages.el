@@ -188,4 +188,21 @@
 	 )
   )
 
+;; ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+;;	find file in project
+;; ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+(use-package projectile
+  :ensure t
+  :bind-keymap
+  ("s-p" . projectile-command-map)
+  ("C-c p" . projectile-command-map)
+  :config
+  (projectile-mode +1))
+
+(use-package helm-projectile
+  :ensure t
+  :bind ("s-p h" . helm-projectile-find-file)
+  :config
+  (helm-projectile-on))
+
 (provide 'pkg-packages)
