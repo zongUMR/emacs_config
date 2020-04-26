@@ -49,7 +49,7 @@
 ;; (toggle-frame-maximized)
 
 ;; file edit settings
-(setq tab-width 4
+(setq-default tab-width 2
       inhibit-splash-screen t
       initial-scratch-message nil
       sentence-end-double-space nil
