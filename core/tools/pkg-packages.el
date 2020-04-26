@@ -193,15 +193,14 @@
 ;; ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 (use-package projectile
   :ensure t
-  :bind-keymap
-  ("s-p" . projectile-command-map)
-  ("C-c p" . projectile-command-map)
   :config
+  (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+	(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
   (projectile-mode +1))
 
 (use-package helm-projectile
   :ensure t
-  :bind ("s-p h" . helm-projectile-find-file)
+  :bind ("M-t" . helm-projectile-find-file)
   :config
   (helm-projectile-on))
 
