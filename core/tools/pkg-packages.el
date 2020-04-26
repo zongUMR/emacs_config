@@ -60,6 +60,7 @@
   (progn
     (global-linum-mode t)
     (setq linum-format "%4d  ")
+    (set-face-foreground 'linum "light green")
     ))
 
 ;; ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
