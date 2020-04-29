@@ -64,13 +64,6 @@
     ))
 
 ;; ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-;;	Auto pair when input
-;; ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-(use-package autopair
-  :config (autopair-global-mode))
-
-
-;; ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ;;	Sidebar for emacs
 ;; ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 (use-package all-the-icons)
@@ -204,5 +197,19 @@
   :bind ("M-t" . helm-projectile-find-file)
   :config
   (helm-projectile-on))
+
+;; ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+;;     ace-window
+;; ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+(use-package ace-window
+ :bind ("M-o" . ace-window)
+ )
+
+;; ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+;;     smartparens
+;; ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+(use-package smartparens
+  :ensure t
+  :custom (smartparens-global-mode t))
 
 (provide 'pkg-packages)
