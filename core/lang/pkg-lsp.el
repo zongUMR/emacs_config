@@ -13,11 +13,6 @@
     (web-mode . lsp-deferred)
     (haskell-mode . lsp-deferred)
     )
-  :bind (
-	 ("C-c C-d" . lsp-find-definition)
-	 ("C-c C-r" . lsp-find-reference)
-	 ("C-c C-b" . pop-tag-mark)
-	 )
 
   :config
   (lsp-register-client

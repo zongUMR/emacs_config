@@ -5,3 +5,5 @@ elpa
 ./auto-save-list
 .savehist
 .lsp-session-*
+.custom.el
+*.eld
