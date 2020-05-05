@@ -7,7 +7,7 @@
 (require 'pkg-markdown)
 (require 'pkg-rust)
 (require 'pkg-tools)
-(require 'json)
+(require 'pkg-json)
 (require 'pkg-haskell)
 (require 'pkg-graphql)
 
