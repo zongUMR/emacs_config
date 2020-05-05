@@ -2,6 +2,8 @@
 ;;	Python IDE Setup
 ;; ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 (use-package lsp-python-ms
+  :commands lsp-python-ms
+  :defer t
   :ensure t
   :init
   :hook (python-mode . (lambda ()
@@ -10,6 +12,8 @@
 
 
 (use-package yapfify
+  :commands (yapf-mode)
+  :defer t
   :config
   (defun format-python()
     (when (eq major-mode 'python-mode)

@@ -24,6 +24,8 @@
     (add-hook 'web-mode-hook  'emmet-mode)))
 
 (use-package prettier-js
+  :commands prettier-js-mode
+  :defer t
   :ensure t
   :init
   (add-hook 'web-mode-hook 'prettier-js-mode)

@@ -17,11 +17,14 @@
   :commands (disaster))
 
 (use-package clang-format
+ :commands (clang-format-buffer)
+ :defer t
  :config
  (defun clang-action-func()
   (add-hook 'before-save-hook 'clang-format-buffer)
   )
 
+ :init
  (add-hook 'c-mode-common-hook 'clang-action-func)
  )
 

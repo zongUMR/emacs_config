@@ -9,5 +9,6 @@
 (require 'pkg-tools)
 (require 'json)
 (require 'pkg-haskell)
+(require 'pkg-graphql)
 
 (provide 'lang)

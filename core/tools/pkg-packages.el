@@ -155,7 +155,9 @@
 ;;	YAML mode
 ;; ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 (use-package yaml-mode
-  :config
+  :commands yaml-mode
+  :defer t
+  :init
   (add-to-list 'auto-mode-alist '("yaml" . yaml-mode)))
 
 

@@ -2,8 +2,9 @@ transient/
 recentf
 elpa
 
-./auto-save-list
+auto-save-list
 .savehist
 .lsp-session-*
 .custom.el
 *.eld
+.cache
